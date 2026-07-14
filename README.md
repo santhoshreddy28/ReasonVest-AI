@@ -39,6 +39,109 @@ chatbot: an agent that performs a research task and explains its answer.
   pipeline (including the AI call) entirely; cached in-process, with an
   optional MongoDB tier that's shared across server instances
 
+---
+
+# 📸 Screenshots
+
+## 🏠 Landing Page
+
+AI-powered investment research homepage with live company search.
+
+<p align="center">
+  <img src="docs/screenshots/01-home-page.png" width="900"/>
+</p>
+
+---
+
+## 📊 Investment Research Report
+
+The AI generates an investment recommendation with confidence score, investment score, and key financial metrics.
+
+<p align="center">
+  <img src="docs/screenshots/02-investment-summary.png" width="900"/>
+</p>
+
+---
+
+## 📈 Financial Analysis
+
+Bull case, bear case, opportunities, risks, radar chart, and financial metrics.
+
+<p align="center">
+  <img src="docs/screenshots/03-analysis-details.png" width="900"/>
+</p>
+
+---
+
+## 🧠 AI Reasoning
+
+Transparent reasoning, market outlook, and latest news used by the AI to justify its recommendation.
+
+<p align="center">
+  <img src="docs/screenshots/04-ai-reasoning.png" width="900"/>
+</p>
+
+---
+
+## 💬 Follow-up Investment Chat
+
+Continue asking questions about the generated investment report using the embedded AI assistant.
+
+<p align="center">
+  <img src="docs/screenshots/05-follow-up-chat.png" width="900"/>
+</p>
+
+---
+
+## 🤖 Standalone AI Assistant
+
+General-purpose investment assistant with voice input, file attachments, markdown rendering, and conversation history.
+
+<p align="center">
+  <img src="docs/screenshots/06-ai-assistant-home.png" width="900"/>
+</p>
+
+---
+
+## 📝 AI Conversation
+
+Example interaction with the assistant answering investment-related questions.
+
+<p align="center">
+  <img src="docs/screenshots/07-ai-assistant-chat.png" width="900"/>
+</p>
+
+---
+
+## 👻 Incognito Mode
+
+Incognito conversations are not saved to local history.
+
+<p align="center">
+  <img src="docs/screenshots/08-incognito-mode.png" width="900"/>
+</p>
+
+---
+
+## ⚖️ Company Comparison
+
+Side-by-side AI comparison of two companies using live financial data and AI reasoning.
+
+<p align="center">
+  <img src="docs/screenshots/09-company-comparison.png" width="900"/>
+</p>
+
+---
+
+# 📄 Additional Documentation
+
+The repository also includes supporting documentation inside the `docs` folder.
+
+- **Example-Runs.pdf** – Complete working examples of the AI Investment Research Agent.
+- **LLM-Development-Log.pdf** – ChatGPT / Claude development conversations used while building the project.
+- **screenshots/** – High-resolution screenshots of the application.
+  
+
 ## Tech Stack
 
 Next.js 16 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS 4 ·
