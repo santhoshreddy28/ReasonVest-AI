@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #08090d;
+  --foreground: #F1F5F9;
+  --glow-accent: #3B82F6;
+
+  /* Signature brand accent for the AI Assistant redesign - a single
+     "signal violet" used for the brand mark's badge fill, the composer's
+     send button, and active states, so the mark and the primary action
+     always read as the same color. Kept independent from --glow-accent
+     (the marketing landing page's existing blue glow) so this palette
+     stays scoped to the assistant experience rather than recoloring the
+     rest of the site. */
+  --brand-300: #C4B5FD;
+  --brand-400: #9B7CFD;
+  --brand-500: #7C5CFC;
+  --brand-600: #5F3FE0;
+  --brand-ink: #F5F3FF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-ink: var(--brand-ink);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Backs lib/fonts.ts's `displayFont.className` - the assistant's brand
+   moments (wordmark, empty-state greeting, sidebar label) use this
+   distinct geometric sans; everything else keeps the body stack above. */
+.font-display {
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Soft, low-anchored radial glow used behind the hero/search - the same
+   restrained "one glow, nothing else fighting it" language across the
+   whole landing experience rather than a gradient per section. */
+.ambient-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 100%,
+    color-mix(in srgb, var(--glow-accent) 22%, transparent),
+    transparent 70%
+  );
+}
+
+/* Same "one restrained glow, nothing else fighting it" language as
+   .ambient-glow above, but in the assistant's own brand color and anchored
+   near the top - sits behind the empty-state hero on /assistant. */
+.assistant-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 55% 40% at 50% 15%,
+    color-mix(in srgb, var(--brand-500) 20%, transparent),
+    transparent 70%
+  );
+}
+
+/* Brand-colored text selection, scoped to the assistant page rather than
+   applied globally - keeps the "one accent, used consistently" rule
+   covering selection highlights without recoloring text selection
+   sitewide (the landing/dashboard pages keep the browser default). */
+[data-assistant-scope] ::selection {
+  background-color: color-mix(in srgb, var(--brand-500) 40%, transparent);
+  color: var(--foreground);
+}
