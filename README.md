@@ -2,6 +2,12 @@
 
 **Investment Decisions Powered by Evidence.**
 
+## 🚀 Live Demo
+
+🔗 **[View ReasonVest AI Live](https://reason-vest-ai-up4p.vercel.app/)**
+
+> Try the deployed application and explore AI-powered investment research, company comparison, and the AI Assistant.
+
 An AI investment research platform. Enter a public company, and it pulls live
 company data, financials, and news, then has an AI model evaluate the
 evidence and produce a structured investment report — recommendation,
